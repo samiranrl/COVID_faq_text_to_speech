@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect
-from .models import Question
+from .models import Question, Visit
 from sys import stderr
 from collections import OrderedDict 
+from django.db.models import F
 
 def open_landing_page(request):
     lang_code_translator = OrderedDict({"English": "en", "Hindi": "hi", "Bengali": "bn", "Telugu": "te", "Marathi": "mr", "Tamil": "ta",  "Kannada": "kn", "Gujarati": "gu"})
@@ -27,12 +28,15 @@ def open_landing_page(request):
             active_status = True
         language_data.append({"active": str(active_status), "head":lang_translator[key], "url" : "/?l=" + lang_code_translator[key]})
 
-
+    curr_visits = Visit.objects.get(id=1)
     # print (language_data, file = stderr)
+    curr_visits.count = F('count') + 1
+    curr_visits.save()
+    curr_visits.refresh_from_db()
 
 
 
-    return render(request, 'landing.html', {"questions": question_objects, "language_data": language_data})
+    return render(request, 'landing.html', {"questions": question_objects, "language_data": language_data, "count" : curr_visits.count})
 
 
     

@@ -12,6 +12,8 @@
 
     {% block css_loader %}{% endblock %}
 <style type="text/css">
+
+
     
 .resp-sharing-button__link,
 .resp-sharing-button__icon {
@@ -219,7 +221,20 @@ background-color: #FF6600
 <body translate="no" style="margin-right: 5%;margin-left: 5%">
 
 
+
+
+
+
+
+
+
+
+
+
+
     <script type="text/javascript">
+
+
 
 
 
@@ -239,6 +254,9 @@ background-color: #FF6600
 
     closeModal = function(modal_id) {
         document.getElementById(modal_id).classList.remove("active");
+  var sounds = document.getElementsByTagName('audio');
+  for(i=0; i<sounds.length; i++) sounds[i].pause();
+
     };
 
 
@@ -270,6 +288,7 @@ background-color: #FF6600
 
     <header class="navbar">
         <section class="navbar-section">
+       
         </section>
         <section class="navbar-center">
             <a href="{% url 'landing' %}"><img src="{% static 'images/mascot.png' %}" class="img-responsive ..." alt="..." width="50" style="margin: 3%"></a>
