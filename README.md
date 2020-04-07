@@ -1,1 +1,2 @@
-# corona_faq
+# Corona FAQ
+
