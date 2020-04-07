@@ -3,6 +3,20 @@
 <html translate="no">
 
 <head>
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163022003-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-163022003-1');
+</script>
+
+
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="content-language" content="en" />
@@ -236,7 +250,7 @@
         document.getElementById(modal_id).classList.remove("active");
         var sounds = document.getElementsByTagName('audio');
         for (i = 0; i < sounds.length; i++) sounds[i].pause();
-
+        for (i = 0; i < sounds.length; i++) sounds[i].currentTime = 0;
     };
 
 
