@@ -16,32 +16,21 @@
             <div class="card-title h5"><img width="30px" src="{% static 'images/speaking.png' %}" style="margin-right: 1%;margin-bottom: -0.4%"> {{ question.question_text }} </div>
         </div>
     </div>
-
-
-   <audio id="question-audio-{{question.id}}" >
-                        <source src="{% static '' %}sounds/{{question.id}}_question.mp3"  type="audio/mp3">
-                    </audio>
-
-<script type="text/javascript">
-    
-
-
-
-
-</script>
-
-
-
+    <audio id="question-audio-{{question.id}}">
+        <source src="{% static '' %}sounds/{{question.id}}_question.mp3" type="audio/mp3">
+    </audio>
+    <script type="text/javascript">
+    </script>
     <div class="modal" id="modal-id-{{question.id}}" style="margin: 5%">
         <a class="modal-overlay" id="modal-close-overlay-{{question.id}}" aria-label="Close"></a>
         <div class="modal-container">
             <div class="modal-header">
                 <a class="btn btn-clear btn-lg float-right" id="modal-close-button-{{question.id}}" aria-label="Close"></a>
-                <div class="modal-title h5">{{ question.question_text }}  </div> 
+                <div class="modal-title h5">{{ question.question_text }} </div>
             </div>
             <br>
             <div class="modal-body">
-                  <div class="content">
+                <div class="content">
                     <audio controls style="transform: scale(1.2)">
                         <source src="{% static '' %}sounds/{{question.id}}_answer.mp3" type="audio/mp3">
                     </audio>
@@ -49,8 +38,6 @@
                 <div class="content" id="question-body-text-{{question.id}}">
                     <div id="question-body-text-placeholder-{{question.id}}" style="display: none"> {{ question.answer_text }}</div>
                 </div>
-               
-              
             </div>
             <div class="modal-footer">
                 <button class="btn" id="modal-footer-close-button-{{question.id}}" style="margin-top: 5%">Close</button>
@@ -132,8 +119,9 @@
             </div>
         </div>
     </div>
-<div style="margin-top: 2%"><h6>This website has been visited <strong>{{ count }}</strong> times</h6></div><br>
-
+    <div style="margin-top: 2%">
+        <h6>This website has been visited <strong>{{ count }}</strong> times</h6>
+    </div><br>
     <button class="btn btn-lg" id="open-share-modal">Share with someone in need</button>
 </div>
 {% endblock content_loader %}
