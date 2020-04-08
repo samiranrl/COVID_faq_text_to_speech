@@ -9,7 +9,11 @@
 {% endif %}
 {% endfor %}
 <!-- <a href="#" class="text-large text-dark" style="margin: 1.5%">ଓଡ଼ିଆ</a> <br> -->
-<div style="margin-top: 5%">
+<br>
+
+
+
+<div style="margin-top: 1%">
     {% for question in questions %}
     <div class="card" id="question-{{question.id}}" style="margin-top: 1.5%;cursor: pointer" onclick="document.getElementById('question-audio-{{question.id}}').play()">
         <div class="card-header">

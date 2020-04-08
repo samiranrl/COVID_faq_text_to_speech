@@ -279,14 +279,16 @@
                 <div class="column">
                     <header class="navbar">
                         <section class="navbar-section">
+                     <!--        <a href="{% url 'landing' %}"><img src="{% static 'images/mascot.png' %}" class="img-responsive ..." alt="..." width="50" style="margin: 3%"></a> -->
                         </section>
                         <section class="navbar-center">
-                            <a href="{% url 'landing' %}"><img src="{% static 'images/mascot.png' %}" class="img-responsive ..." alt="..." width="50" style="margin: 3%"></a>
+                         
                         </section>
                         <section class="navbar-section">
                         </section>
                     </header>
-                    <div class="text-large text-dark" style="margin-top: 1%;margin-right: 1%;margin-left: 1%">An initiative by <a target="_blank" href="https://www.tildehat.com">tildehat</a>. Click to <a href="{% url 'about' %}">learn more and contribute.</a></div><br>
+                     <h5>Coronavirus basic information read aloud in indian languages </h5>
+                    <div class="text-large text-dark" style="margin-top: 1.2%;margin-right: 1%;margin-left: 1%">An initiative by <a target="_blank" href="https://www.tildehat.com">tildehat</a>. Click to <a href="{% url 'about' %}">learn more and contribute.</a></div><br>
                     {% block content_loader %}
                     {% endblock %}
                 </div>
