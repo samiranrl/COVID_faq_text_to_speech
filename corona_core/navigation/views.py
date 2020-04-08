@@ -5,8 +5,8 @@ from collections import OrderedDict
 from django.db.models import F
 
 def open_landing_page(request):
-    lang_code_translator = OrderedDict({"English": "en", "Hindi": "hi", "Bengali": "bn", "Telugu": "te", "Marathi": "mr", "Tamil": "ta",  "Kannada": "kn", "Gujarati": "gu"})
-    lang_translator = OrderedDict({"English": "English", "Hindi": "हिन्दी", "Bengali": "বাংলা", "Telugu": "తెలుగు", "Marathi": "मराठी", "Tamil": "தமிழ்",  "Kannada": "ಕನ್ನಡ", "Gujarati": "ગુજરાતી"})
+    lang_code_translator = OrderedDict({"English": "en", "Hindi": "hi", "Bengali": "bn", "Telugu": "te", "Marathi": "mr", "Tamil": "ta",  "Kannada": "kn", "Gujarati": "gu", "Malayalam": "ml"})
+    lang_translator = OrderedDict({"English": "English", "Hindi": "हिन्दी", "Bengali": "বাংলা", "Telugu": "తెలుగు", "Marathi": "मराठी", "Tamil": "தமிழ்",  "Kannada": "ಕನ್ನಡ", "Gujarati": "ગુજરાતી", "Malayalam":"മലയാളം"})
 
     language = request.GET.get('l')
 
