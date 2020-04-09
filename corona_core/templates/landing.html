@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content_loader %}
+
+<div style="margin-top: 1.5%">
+
 {% for language in language_data %}
 {% if language.active == "True" %}
 <a href="{{ language.url }}" class="text-large" style="margin: 1.5%;">{{language.head}}</a>
@@ -10,10 +13,10 @@
 {% endfor %}
 <!-- <a href="#" class="text-large text-dark" style="margin: 1.5%">ଓଡ଼ିଆ</a> <br> -->
 <br>
+</div>
 
 
-
-<div style="margin-top: 1%">
+<div style="margin-top: 3%">
     {% for question in questions %}
     <div class="card" id="question-{{question.id}}" style="margin-top: 1.5%;cursor: pointer" onclick="document.getElementById('question-audio-{{question.id}}').play()">
         <div class="card-header">
@@ -123,7 +126,8 @@
             </div>
         </div>
     </div>
-    <div style="margin-top: 2%">
+    <br>
+    <div style="margin-top: 1.5%">
         <h6>This website has been visited <strong>{{ count }}</strong> times</h6>
     </div><br>
     <button class="btn btn-lg" id="open-share-modal">Share with someone in need</button>
