@@ -35,11 +35,20 @@
         
     </ul>
 </div>
-<button class="btn btn-lg" onclick="history.go(-1)" style="margin-top: 5%">Go back to the homepage</button>
+<a id="back_button" href="https://virusbhagao.com"><button class="btn btn-lg" style="margin-top: 5%">Go back to the homepage</button></a>
 {% endblock content_loader %}
 {% block js_loader %}
 <script type="text/javascript">
 var prev_page = document.referrer;
+if (prev_page.includes("virusbhagao.com")) {
+document.getElementById("back_button").href = prev_page
+}
+else {
+
+document.getElementById("back_button").href = "https://virusbhagao.com"
+
+}
+
 // var answer_modal = new minimalModal("modal-id", "question", ["modal-close-overlay","modal-close-button"] )
 </script>
 {% endblock %}
