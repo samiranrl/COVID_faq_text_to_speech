@@ -29,6 +29,8 @@ Django, sqlite3, gtts, googletrans, spectre css
 - pip3 install pandas
 - pip3 install gtts
 - pip3 install googletrans
+- python3 manage.py makemigrations
+- python3 manage.py migrate
 - python3 bootstrap.py (this takes some time for automatic translation and text to speech)
 - python3 manage.py runserver
 
