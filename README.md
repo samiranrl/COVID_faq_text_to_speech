@@ -25,7 +25,7 @@ Django, sqlite3, gtts, googletrans, spectre css
 
 # Instructions to run
 
-- pip3 install Django==2.2.5
+- pip3 install Django==2.2.10
 - pip3 install pandas
 - pip3 install gtts
 - pip3 install googletrans
