@@ -9,3 +9,27 @@ There is an abundance of misinformation and superstition regarding coronavirus, 
 Currently, we are looking for tamil and telugu translators for (2-3 hours of volunteer translation work)
 
 Please help us spread the word, especially to people who need this.
+
+# Translators
+
+- **Sanjay Kumar Rai** for Hindi
+- **Sweda Nair** for Malayalam
+- **Sanjay Tippanavar** for Kannada
+- **Jash Dave** for Gujarati
+- **Shibsankar Das** for Bengali
+- And all the translators who wish to remain anonymous..
+
+# Stack
+Django, sqlite3, gtts, googletrans, spectre css
+
+
+# Instructions to run
+
+- pip3 install Django==2.2.5
+- pip3 install pandas
+- pip3 install gtts
+- pip3 install googletrans
+- python3 bootstrap.py (this takes some time for automatic translation and text to speech)
+- python3 manage.py runserver
+
+- open http://localhost:8000/
