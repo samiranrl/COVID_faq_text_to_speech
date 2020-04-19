@@ -17,6 +17,7 @@ Please help us spread the word, especially to people who need this.
 - **Sanjay Tippanavar** for Kannada
 - **Jash Dave** for Gujarati
 - **Shibsankar Das** for Bengali
+- **Umashankar Nagarajan** for Tamil
 - And all the translators who wish to remain anonymous..
 
 # Stack

@@ -99,10 +99,20 @@ for i, row in bengali_questions.iterrows():
     tts.save('corona_core/static/sounds/' + str(question.id) + '_' + 'question.mp3')
     print("done", row['question'])
 
+tamil_questions = pd.read_excel("questions/questions.xlsx", sheet_name = "Tamil")
+for i, row in tamil_questions.iterrows():
+#     print(row['question'], row['answer'])
+    question = Question.objects.create(question_text = row['question'], answer_text = row['answer'], language = "Tamil")
+    tts = gTTS(remove_tags(row['answer']), lang='ta')
+    tts.save('corona_core/static/sounds/' + str(question.id) + '_' + 'answer.mp3')
+    tts = gTTS(remove_tags(row['question']), lang='ta')
+    tts.save('corona_core/static/sounds/' + str(question.id) + '_' + 'question.mp3')
+    print("done", row['question'])
+
 
 for i, row in english_questions.iterrows():
     for key in lang_code_translator.keys():
-        if key not in ["English", "Hindi", "Gujarati", "Marathi", "Malayalam", "Kannada", "Bengali"]:
+        if key not in ["English", "Hindi", "Gujarati", "Marathi", "Malayalam", "Kannada", "Bengali", "Tamil"]:
             print(key)
             question_translated = translator.translate(row['question'], src="en", dest=lang_code_translator[key]).text
             answer_translated = translator.translate(row['answer'], src="en", dest=lang_code_translator[key]).text
