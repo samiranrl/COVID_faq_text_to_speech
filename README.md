@@ -19,7 +19,9 @@ Please help us spread the word, especially to people who need this.
 - **Shibsankar Das**
 - **Umashankar Nagarajan**
 - **Soumen Khatua**
-
+- **Lalitha Krishnamurthy**
+- **Vidhya Krishnamurthy**
+- **Kiran Sukhavasi**
 
 
 # Stack
