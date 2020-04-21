@@ -110,14 +110,25 @@ for i, row in tamil_questions.iterrows():
     print("done", row['question'])
 
 
-for i, row in english_questions.iterrows():
-    for key in lang_code_translator.keys():
-        if key not in ["English", "Hindi", "Gujarati", "Marathi", "Malayalam", "Kannada", "Bengali", "Tamil"]:
-            print(key)
-            question_translated = translator.translate(row['question'], src="en", dest=lang_code_translator[key]).text
-            answer_translated = translator.translate(row['answer'], src="en", dest=lang_code_translator[key]).text
-            question = Question.objects.create(question_text = question_translated, answer_text = answer_translated, language = key)
-            tts = gTTS(remove_tags(answer_translated), lang=lang_code_translator[key])
-            tts.save('corona_core/static/sounds/' + str(question.id) + '_' + 'answer.mp3')
-            tts = gTTS(remove_tags(question_translated), lang=lang_code_translator[key])
-            tts.save('corona_core/static/sounds/' + str(question.id) + '_' + 'question.mp3')
+telugu_questions = pd.read_excel("questions/questions.xlsx", sheet_name = "Telugu")
+for i, row in telugu_questions.iterrows():
+#     print(row['question'], row['answer'])
+    question = Question.objects.create(question_text = row['question'], answer_text = row['answer'], language = "Telugu")
+    tts = gTTS(remove_tags(row['answer']), lang='te')
+    tts.save('corona_core/static/sounds/' + str(question.id) + '_' + 'answer.mp3')
+    tts = gTTS(remove_tags(row['question']), lang='te')
+    tts.save('corona_core/static/sounds/' + str(question.id) + '_' + 'question.mp3')
+    print("done", row['question'])
+
+
+# for i, row in english_questions.iterrows():
+#     for key in lang_code_translator.keys():
+#         if key not in ["English", "Hindi", "Gujarati", "Marathi", "Malayalam", "Kannada", "Bengali", "Tamil"]:
+#             print(key)
+#             question_translated = translator.translate(row['question'], src="en", dest=lang_code_translator[key]).text
+#             answer_translated = translator.translate(row['answer'], src="en", dest=lang_code_translator[key]).text
+#             question = Question.objects.create(question_text = question_translated, answer_text = answer_translated, language = key)
+#             tts = gTTS(remove_tags(answer_translated), lang=lang_code_translator[key])
+#             tts.save('corona_core/static/sounds/' + str(question.id) + '_' + 'answer.mp3')
+#             tts = gTTS(remove_tags(question_translated), lang=lang_code_translator[key])
+#             tts.save('corona_core/static/sounds/' + str(question.id) + '_' + 'question.mp3')
