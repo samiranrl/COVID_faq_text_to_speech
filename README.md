@@ -10,15 +10,17 @@ Currently, we are looking for tamil and telugu translators for (2-3 hours of vol
 
 Please help us spread the word, especially to people who need this.
 
-# Translators
+# Contributors
 
-- **Sanjay Kumar Rai** for Hindi
-- **Sweda Nair** for Malayalam
-- **Sanjay Tippanavar** for Kannada
-- **Jash Dave** for Gujarati
-- **Shibsankar Das** for Bengali
-- **Umashankar Nagarajan** for Tamil
-- And all the translators who wish to remain anonymous..
+- **Sanjay Kumar Rai**
+- **Sweda Nair**
+- **Sanjay Tippanavar**
+- **Jash Dave**
+- **Shibsankar Das**
+- **Umashankar Nagarajan**
+- **Soumen Khatua**
+
+
 
 # Stack
 Django, sqlite3, gtts, googletrans, spectre css
