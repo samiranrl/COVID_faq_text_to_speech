@@ -6,8 +6,6 @@ The web app reads aloud basic coronavirus information in Indian languages. The g
 
 There is an abundance of misinformation and superstition regarding coronavirus, and surprisingly few sources which give out verified facts. Our only source of information is a subset of: https://www.who.int/news-room/q-a-detail/q-a-coronaviruses, which we translate to Indian languages.
 
-Currently, we are looking for tamil and telugu translators for (2-3 hours of volunteer translation work)
-
 Please help us spread the word, especially to people who need this.
 
 # Contributors
